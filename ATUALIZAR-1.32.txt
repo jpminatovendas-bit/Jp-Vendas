@@ -1,0 +1,38 @@
+JP MINATO 1.32 — PAINEL DE TRABALHO POR OPERADOR
+
+COMO ATUALIZAR NO ESCRITÓRIO
+1. Pare o servidor do JP Minato. Fechar somente a aba do navegador não encerra o servidor.
+2. Faça uma cópia de segurança da instalação e de sua pasta dados.
+3. Extraia o pacote e copie os arquivos do programa para a instalação atual. Preserve a pasta dados e seu conteúdo. Não apague seus cadastros, fotos, PDFs ou credenciais.
+4. Inicie o JP Minato, abra o navegador e pressione Ctrl+F5. Confira MVP 1.32.
+5. Entre como Jeff, Lara ou Pai. O painel pessoal aparece no topo.
+Não há novas dependências para instalar. A extensão continua 1.17.2, sem necessidade de reinstalação.
+
+PAINEL PESSOAL E VISÃO GERAL
+Meu painel mostra rotas/tarefas/atendimentos atribuídos ao usuário, incluindo retornos de ligação dele. Geral permite trabalhar em todas as rotas; escolher Jeff/Lara/Pai é filtro, não permissão. Selecionar uma rota específica muda a visão para Geral para trabalhar nela livremente.
+Responsável pela rota/tarefa e executor são registros diferentes. Fazer uma ligação/concluir uma tarefa de outra pessoa não transfere a rota.
+
+INDICADORES E GRÁFICOS
+Hoje, Esta semana (segunda até hoje), Últimos 7 dias, Últimos 30 dias e datas personalizadas. Envios são registros válidos, e não quantidade de abas abertas. WhatsApp não confirmado e envios corrigidos/inativados não contam. Aceite SMTP/ACK de WhatsApp não comprova leitura ou entrega ao destinatário.
+Atividade executada por filtra autoria real, independentemente da rota. Envios históricos sem autor continuam no Geral e não recebem uma autoria inventada. Câmaras únicas e número de envios são indicadores separados. PDF é subconjunto dos envios, não outra mensagem somada.
+Cobertura, funil e conversas mostram situação atual das Câmaras da visão; atividades/envios/tarefas concluídas usam o período selecionado. Clique nos cartões ou gráficos para abrir tarefas, atendimentos ou lista filtrada.
+
+LIGAR E PEDIR WHATSAPP
+A fila é automática e usa os contatos institucionais da Câmara; WhatsApp do presidente não substitui o da Câmara. Telefone pendente/inconclusivo não é marcado como ausência de WhatsApp.
+Com telefone: Ligar / pedir WhatsApp. Sem telefone: Buscar contato. Confirmar WhatsApp na ficha remove a pendência automaticamente. Etapas Ganho/Perdido ficam fora da fila de prospecção.
+Registre Não atendeu, Retornar, Número incorreto, Atendeu, WhatsApp informado ou Sem WhatsApp. Retornar exige data/hora e aparece na agenda; o painel sinaliza retornos futuros. Uma nova ligação substitui o retorno anterior. Confirmação de WhatsApp encerra essa pendência de obter o contato.
+Ligação atendida fica no histórico de contatos e atualiza a situação comercial, sem virar envio. Não atendeu/número incorreto não comprovam contato realizado. Informar que recebeu um WhatsApp não confirma automaticamente o número: cadastre e confira na ficha.
+
+TAREFAS E AGENDA
+Crie tarefa com município opcional, responsável, data/hora e observações. É possível concluir, reabrir, cancelar e reagendar. O programa registra quem criou, alterou e concluiu. Avisos de prazo ficam no painel; não são alarmes externos ou sincronização com Google Agenda.
+
+ATENDIMENTOS E VENDEDORES
+Etapas: A contactar, Contactada/definir próximo passo, Aguardando resposta, Em conversa, Encaminhado ao vendedor, Em negociação, Ganho e Perdido.
+Conversas de WhatsApp são marcadas manualmente: esta versão não lê as respostas automaticamente. Use uma tarefa para definir a próxima ação e data de acompanhamento.
+Encaminhamento exige vendedor e resumo pode ser preenchido. Situações: Encaminhado, Assumido, Devolvido. Contagem de encaminhamentos considera transições/vendedor, sem duplicar por simples edição de observações. É registro interno; nenhuma mensagem é enviada ao vendedor automaticamente.
+
+E-MAILS
+Caixa do painel mostra não lidos vinculados aos municípios da visão e atalho para caixa geral. Mensagens sem vínculo ficam na caixa geral, compartilhada. Não são atribuídas automaticamente à pessoa que estiver logada. A conta/IMAP e configuração compartilhada de envio da versão 1.31.4 permanecem.
+
+DADOS
+Novos registros são adicionados ao banco já existente em dados, sem remover dados anteriores. Painel consulta dados locais; não conecta ao e-mail nem carrega mapa a cada abertura. Atualiza a cada minuto enquanto visível e permite atualizar manualmente.

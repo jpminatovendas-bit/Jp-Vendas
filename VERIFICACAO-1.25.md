@@ -1,0 +1,8 @@
+# Verificação 1.25 — Novas páginas personalizadas
+
+- Base preparada a partir das duas páginas fornecidas em paginas editaveis.pdf. Capa preserva logo, títulos e emblemas laterais; troca município/UF e brasão central. Comparativos preservam fundo, logo e textos institucionais; trocam município, brasão, período, nomes e originais/restauradas.
+- Fotos de exemplo removidas dos pixels da base, sem permanecer em espaços não preenchidos. Textos de exemplo removidos do conteúdo pesquisável. Fontes DejaVu completas incluídas com licença para nomes, acentos e datas que não existiam na fonte parcial do PDF de origem.
+- Novo nome versionado de modelo evita sobrescrever cópias antigas em dados. Nova base/fontes ficam gerenciadas em dados/modelos/bases. Restante do catálogo e PDFs anteriores preservados. Não há migração destrutiva. Metadado layout_version=1.25 separado da compatibilidade de envios.
+- Três novos testes: troca de dados com dez pares e duas páginas de comparação, fontes/acentos/período, uso com modelo antigo preservado; prévia com foto pendente e município longo; verificação de pixels vazios nas posições das fotos da base.
+- Conferência visual das duas páginas renderizadas, com nove comparativos e substituição de município, textos, nomes e brasão. Fotos recortadas do próprio arquivo enviado usadas apenas em teste temporário; não incluídas como dados no pacote.
+- Suíte Python final: 281 testes executados, OK, com um ignorado por condição de ambiente; testes de prompt Node e sintaxe também aprovados. Windows, VPN e dados do escritório não acessados. Atualização exige substituir arquivos do programa com servidor parado e depois gerar novamente os PDFs desejados.

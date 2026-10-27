@@ -1,0 +1,56 @@
+JP MINATO 1.31.1 — EXTENSÃO 1.17.1
+
+Correção da conexão da estação de saudações.
+
+A configuração da sua conta já está salva. Não é necessário apagar dados.
+
+NO COMPUTADOR DO ESCRITÓRIO:
+1. Feche a aba JP Minato · Estação WhatsApp.
+2. Feche a aba do WhatsApp Web. Isso remove o componente antigo carregado
+   na página. Recarregar somente a extensão não substitui código já injetado.
+3. Pare o servidor do MVP pelo PARAR-JP-MINATO.vbs.
+4. Faça backup da pasta dados, mantendo o programa parado.
+5. Extraia o pacote completo 1.31.1 e copie o conteúdo de mvp-jp-minato
+   para a instalação atual, substituindo arquivos e mesclando subpastas.
+   PRESERVE a pasta dados existente.
+6. No Chrome, abra chrome://extensions, localize JP Minato e clique em
+   Recarregar (seta circular). A versão da extensão deve ser 1.17.1.
+   Se o Chrome aponta para outra pasta de extensão, atualize os arquivos
+   nessa pasta também, ou carregue a pasta extensao-chrome atualizada.
+7. Abra ABRIR-JP-MINATO.vbs. No MVP, pressione Ctrl+F5 e escolha o operador.
+8. Nesse MESMO perfil do Chrome, abra https://web.whatsapp.com/ e aguarde
+   as conversas carregarem. Se solicitado, conecte usando o QR Code.
+9. No MVP do escritório, abra WhatsApp do escritório. Confira o número
+   do SEU Business que está conectado, e não o número do destinatário.
+   Clique em Conectar no escritório. Mantenha o painel e o WhatsApp abertos.
+10. O painel deve indicar Conectado com o seu número. Teste UMA saudação
+    para um número conhecido usando Enviar saudação na ficha.
+
+PACOTE SOMENTE DA EXTENSÃO:
+Se já usa o MVP 1.31, pode atualizar somente a pasta extensao-chrome com
+JP-Minato-Extensao-1.17.1.zip e executar os passos 1, 2, 6, 8 e 9.
+O novo diagnóstico aparece no painel da extensão; para ver o mesmo motivo
+no painel do MVP, atualize também o programa completo 1.31.1.
+
+NOVO DIAGNÓSTICO:
+- Biblioteca carregando: aguarde com o WhatsApp Web aberto.
+- Não autenticado: conecte o WhatsApp Web pelo QR Code.
+- Sem conexão: abra a aba do WhatsApp Web e aguarde reconectar.
+- Conta diferente: compare os números Conectada e Configurada no MVP.
+- Número não identificado / LID: o identificador interno não foi usado como
+  telefone. A confirmação/envio permanecem bloqueados, sem inferir a conta.
+- Falha na biblioteca: o motivo aparece com o estágio da falha. Envie uma
+  captura do texto do painel da estação; não precisa enviar suas conversas.
+- Biblioteca antiga na aba: feche essa aba e abra o WhatsApp Web novamente.
+
+A biblioteca foi atualizada de WA-JS 4.6.1 para 4.7.1, com integridade do
+pacote verificada. A detecção prioriza o identificador de telefone PN, quando
+publicado pelo próprio componente, e não confunde LID com número de celular.
+Nenhuma função de migração do WhatsApp foi sobrescrita ou forçada.
+
+Os testes simulados passaram; a conexão com SUA sessão real ainda precisa
+ser validada após instalar. O aviso isLidMigrated isolado não comprova que
+sua conta está desconectada; o painel agora distingue o motivo encontrado.
+
+Somente saudação em texto por clique. PDF não é anexado nesse fluxo.
+Resultado incerto não é reenviado automaticamente.

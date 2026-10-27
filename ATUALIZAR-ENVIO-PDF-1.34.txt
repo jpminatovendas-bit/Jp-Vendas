@@ -1,0 +1,44 @@
+JP MINATO — ATUALIZAÇÃO 1.34
+
+INSTALAÇÃO
+1. Pare o servidor com PARAR-JP-MINATO.vbs e faça backup da pasta dados.
+2. Copie o conteúdo de mvp-jp-minato deste ZIP para a instalação atual onde
+   está app.py, substituindo arquivos e mesclando as pastas web e assets.
+3. Preserve a pasta dados. Este pacote não contém dados de clientes.
+4. Reabra com ABRIR-JP-MINATO.vbs e pressione Ctrl+F5 em todas as abas.
+5. Confira MVP 1.34 no topo da tela.
+Não é necessário atualizar a extensão do Chrome.
+
+ENVIAR COM PDF
+O botão fica ativo mesmo sem PDF gerado ou com catálogo antigo.
+Ao clicar, o sistema confere a configuração de e-mail e os dados do envio,
+valida o projeto, gera um novo catálogo final e envia a mensagem com esse
+novo PDF anexado. Não utiliza silenciosamente um catálogo antigo se falhar.
+Durante a operação, o botão fica temporariamente bloqueado.
+O envio em fila usa o mesmo fluxo para cada destinatário selecionado.
+
+PENDÊNCIAS
+Se faltar brasão, fotos originais, seleção de vereadores ou fotos tratadas,
+o e-mail não é enviado. A tela informa o que corrigir em Criar PDF, com os
+nomes das pessoas afetadas. Após corrigir, clique em Enviar com PDF novamente.
+Erros de geração e de configuração SMTP também são informados.
+
+PROTEÇÃO CONTRA REPETIÇÃO
+Clique duplo é bloqueado. A repetição técnica da mesma solicitação mantém
+o identificador e não cria outro catálogo nem outro envio depois de enfileirado.
+Se houver falha de conexão sem resultado conhecido, use Consultar resultado,
+sem iniciar outro envio. Resultado incerto mantém a conferência já existente.
+O histórico registra envio apenas após aceite pelo servidor SMTP.
+Aceite pelo servidor não comprova entrega nem leitura.
+
+OUTRAS CORREÇÕES INCLUÍDAS
+Este pacote contém as atualizações de catálogo 1.33 e 1.33.1 (modelo novo,
+brasão cadastrado, fotos alinhadas e nome Município Vereadores 2005 a 2008.pdf)
+e a formatação do município nas saudações, com iniciais maiúsculas.
+As páginas adicionais do catálogo e o tamanho enviado são preservados.
+A versão interna do layout permanece 1.33.1 porque a composição não mudou.
+
+VALIDAÇÃO
+20 testes de servidor e verificações da interface em JavaScript aprovados.
+Os testes usaram banco temporário e SMTP simulado; nenhum e-mail real foi enviado.
+A instalação no Windows e a conta real do escritório não foram acessadas.

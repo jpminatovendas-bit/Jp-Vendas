@@ -1,0 +1,44 @@
+JP MINATO COMPLETO — MVP 1.36 — EXTENSÃO 1.18.0
+Consolidado em 27/10/2026.
+
+ESTE É O PROGRAMA COMPLETO
+Não é necessário baixar ou aplicar as atualizações anteriores em sequência.
+Inclui o código do servidor, as telas, o mapa RS, os modelos de catálogo e a extensão completa do Chrome.
+
+PRIMEIRA INSTALAÇÃO NESTE COMPUTADOR
+1. Extraia TODO o ZIP para uma pasta fixa, por exemplo C:\JP-Minato. Não execute dentro do ZIP.
+2. Caso Python ainda não esteja instalado, instale Python 3.11 ou superior para Windows, com o launcher e tkinter. Marque Add Python to PATH.
+3. Abra INICIAR.bat. Na primeira execução, ele prepara o ambiente Python e instala as bibliotecas pela internet.
+4. O programa abre no navegador. Confira MVP 1.36. Nas próximas vezes, você pode usar ABRIR-JP-MINATO.vbs.
+5. Para recursos de extração que dependem de Node.js, instale Node e execute INSTALAR_EXTRATOR.bat. Confira esse instalador para as instruções locais; não é necessário instalar isso para abrir o mapa.
+
+EXTENSÃO CHROME
+Acesse chrome://extensions, habilite Modo do desenvolvedor, clique em Carregar sem compactação e selecione a pasta extensao-chrome deste pacote. Confira versão 1.18.0. A captura fica vinculada à aba aberta pelo sistema.
+
+SE ESTIVER ATUALIZANDO O COMPUTADOR DO ESCRITÓRIO
+Pare o servidor, faça uma cópia de segurança da pasta dados e mescle os arquivos deste pacote na instalação atual, substituindo os arquivos do programa sem apagar dados. Reinicie, feche mapas antigos e pressione Ctrl+F5.
+
+SEUS DADOS ATUAIS
+Este ZIP não contém a pasta dados atual do escritório, senhas ou sessões do WhatsApp. A planilha-base distribuída com o programa é mantida, mas não representa as alterações e o estado atual da base do escritório.
+Para usar o acervo real neste computador, é necessária uma cópia integral da pasta dados feita com o servidor parado, inclusive imagens, PDFs e banco. Não copie apenas empresa.sqlite enquanto o programa está aberto.
+Algumas credenciais protegidas pelo Windows precisam ser informadas novamente no novo computador.
+Uma cópia de dados em outro computador não sincroniza automaticamente as alterações com o escritório. Não opere duas cópias independentes esperando que seus dados se juntem depois.
+Se preferir trabalhar na base do escritório pela VPN já configurada, mantenha o servidor do escritório como a base principal e acesse-o pelo navegador.
+
+NOVIDADES REUNIDAS
+- Mapa amplo, cores por avaliação: alta verde, média verde claro, baixa cinza.
+- Resumo ao passar o mouse, abertura registrada e salvamento automático ao editar/trocar de cidade.
+- Condições personalizadas, três botões de probabilidade, observações, fotos, colagem Ctrl+V e links coletados pela extensão.
+- Roteiros de visita selecionados diretamente no mapa e nomes visíveis com zoom quando couberem.
+- Modelo municipal de PDF atualizado, alinhamento das fotos e geração do PDF antes do envio por e-mail.
+- Capitalização do nome do município nas mensagens.
+- Registro Sem WhatsApp quando houver confirmação negativa da consulta integrada.
+
+LEIA O GUIA ATUAL
+ATUALIZAR-MAPA-SIMPLES-1.36.txt descreve o uso do novo mapa. Os demais guias mantêm o histórico de recursos; instruções antigas de atualização não precisam ser repetidas.
+
+HOSPEDAGEM
+Este pacote é a versão local completa do JP Minato comercial/acervo. Ainda depende de processo Python, banco SQLite e arquivos locais. Não está adaptado para deploy direto na Vercel nem para usar Google Drive como banco de dados.
+
+VALIDAÇÃO DO PACOTE
+Verificados montagem da versão, arquivos referenciados nas telas, importação dos módulos e os testes locais de mapa, avaliações, roteiros e verificação de WhatsApp. A sessão real de WhatsApp, o envio real de e-mail e os atalhos Windows precisam do computador de operação.

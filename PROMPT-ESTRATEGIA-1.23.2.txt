@@ -1,0 +1,26 @@
+Colete os contatos públicos da Câmara e do presidente atual do município informado, começando pelo site cadastrado.
+
+PRIORIDADE DAS FONTES DO CARGO
+1. Mesa Diretora principal atual: nome associado explicitamente ao cargo Presidente. O nome pode vir antes ou depois do cargo, por exemplo “Marcon Marcelo Pilger / Vereador em Exercicio / Presidente”. Extraia somente o nome; não inclua a descrição do cargo.
+2. Lista de vereadores em exercício ou página inicial, quando houver um cartão/bloco que associe claramente aquela pessoa ao cargo Presidente.
+3. Cabeçalho/título da ficha atual pode repetir o cargo, mas não é obrigatório que o faça quando a Mesa já identificou a pessoa.
+Vice-Presidente, Vice Presidente, Vice–Presidente, secretários, presidentes de comissão, ex-presidentes e antigos ocupantes não são o presidente procurado.
+
+NAVEGAÇÃO PARA OS CONTATOS
+Abra o link da pessoa indicada como Presidente na Mesa. Se houver somente o nome, abra Vereadores/Parlamentares e procure a ficha do mesmo nome completo. Compare ignorando acentos, caixa e espaços extras, sem escolher por nome parecido/abreviado ambíguo. A ficha pode fornecer telefone, e-mail e partido mesmo sem repetir o cargo.
+Um título “Nome / Vereador em Exercício / Presidente” serve para identificar o cargo. Biografias podem manter texto antigo, como Vice-Presidente. Quando a Mesa principal e o título atual identificarem a pessoa como Presidente, use essa identificação e registre a divergência da biografia; não substitua o nome pela pessoa marcada como vice na Mesa.
+
+EVITAR REFERÊNCIAS ERRADAS
+Não procure o presidente em atas, leis, portarias, resoluções, licitações, PDFs, documentos, notícias, histórico ou galerias de ex-presidentes. Uma assinatura ou menção de Presidente nesses materiais não é prova do cargo vigente. Priorize sempre a identificação explícita nas páginas principais de Mesa/vereadores/início. Não desperdice etapas nesses documentos.
+
+ANO E VIGÊNCIA
+Quase todas as Câmaras apresentam somente a Mesa vigente sem ano. Aceite essa composição como vigência presumida, com period=null e observação de página sem ano; não procure documento antigo para comprovar 2026. Havendo várias Mesas, escolha a do ano solicitado ou período que o inclua (2026 ou 2025–2026 para referência 2026). Mesa explicitamente antiga não serve. Legislatura 2025–2028 é do vereador e não prova período da presidência. Data de rodapé/publicação não é data da presidência.
+
+CONTATOS
+Primeiro identifique telefones/e-mails institucionais no cabeçalho, rodapé e Contato. Depois os próprios do presidente na ficha. Não atribua rodapé institucional ao presidente. Descarte apenas telefone/WhatsApp/e-mail pessoal que seja igual ao institucional; preserve os distintos. Fone/celular não é WhatsApp sem indicação explícita. Sem contato próprio publicado, guarde o nome identificado e deixe os contatos pessoais ausentes.
+
+RESULTADO
+Cite um trecho literal curto com o nome e cargo na Mesa, cartão ou cabeçalho correto; cite a ficha como fonte dos contatos. Não misture nomes de cartões vizinhos. Finalize quando tiver percorrido as fontes úteis; não invente contatos nem URLs. Registre divergência, ausência e presunção nas observações.
+
+FORMATO DO SITE E EVIDÊNCIA
+O nome pode vir após um ano: “Presidente em Exercício / 2026 — Vereadora — Nome Partido”. Considere o ano da presidência explícito e mantenha a citação literal com cargo, ano e nome. Quando o telefone próprio estiver na mesma página da presidência, cite o trecho que o vincula à pessoa; se necessário, inclua nome e telefone no mesmo trecho contínuo. Telefones podem ter agrupamento como 9.9166-5758; normalize sem inventar dígitos. Não confunda telefone de rodapé com próprio. Use os dados reais de município, UF, ano e site recebidos no payload. Siga exclusivamente o schema de navegação que o programa fornece; estas instruções são a estratégia, sem outro JSON de saída.

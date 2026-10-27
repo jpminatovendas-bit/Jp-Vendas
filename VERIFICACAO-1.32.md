@@ -1,0 +1,9 @@
+# Verificação do MVP 1.32
+
+341 testes Python executados; OK, um ignorado. Oito cenários específicos cobrem isolamento por filtro sem restrição de acesso, autoria real independente da rota, chamada/retorno idempotente, contatos da Câmara distintos do presidente, remoção automática da fila após confirmação, busca de contato sem telefone, tarefa com revisão/autoria de conclusão/reabertura, encaminhamento/assunção sem duplicação, períodos e autoria de envio, retornos do executor em rota alheia e entradas inválidas. Ligação atendida alimenta histórico/lista principal sem virar envio.
+
+Navegador Chromium: login Lara; painel pessoal; Geral; tarefa de Jeff concluída por Lara; ligação com retorno; encaminhamento e vendedor assumindo sem novo lead; livre acesso a rota; filtros por período; cartões/lista; tela desktop e celular sem rolagem horizontal, sem erros JavaScript. Regressão do workspace anterior também aprovada (login/troca, rotas, seleção, menus, e-mail/associação/segurança/anexo). Dados e contas fictícios; nenhuma ligação, mensagem, e-mail real ou API paga. Capturas locais apenas para inspeção interna, fora do pacote.
+
+JavaScript e Python compilados/conferidos. Gráficos usam HTML/CSS, sem novas dependências externas. Novas tabelas são adicionadas ao SQLite existente sem apagar dados anteriores. Extensão permanece 1.17.2. Verificação de WhatsApp e envio não foram alterados nesta entrega.
+
+Limites explícitos: conversa de WhatsApp e etapa comercial são manuais; o MVP não lê respostas nessa integração. Encaminhamento é registro interno, sem mensagem automática ao vendedor. Agenda local no painel, sem alarmes externos. Recebidos usam conta compartilhada já configurada e dados locais sincronizados; desconhecidos ficam na caixa geral. Envios históricos sem autor não são atribuídos por suposição. Não foi executada migração sobre a base real do escritório.

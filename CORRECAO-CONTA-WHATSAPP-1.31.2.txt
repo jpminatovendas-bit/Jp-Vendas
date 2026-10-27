@@ -1,0 +1,32 @@
+JP MINATO — CORREÇÃO DO IDENTIFICADOR DA CONTA WHATSAPP
+Compatível com MVP 1.31 e 1.31.1. Extensão 1.17.1 mantida.
+
+A extensão já reconheceu a conta. Pode ocorrer diferença entre o telefone
+móvel digitado com nono dígito e o identificador PN retornado pelo WhatsApp.
+O MVP deve comparar o identificador EXATO, sem adicionar/remover dígitos
+para declarar contas equivalentes.
+
+CORREÇÃO RÁPIDA (ZIP contém whatsapp_sender129.py e este texto):
+1. No escritório, pare o servidor pelo PARAR-JP-MINATO.vbs.
+2. Guarde uma cópia do arquivo whatsapp_sender129.py atual.
+3. Copie o novo whatsapp_sender129.py para a pasta do programa, ao lado
+   de app.py, substituindo somente esse arquivo. Não mexa na pasta dados.
+4. Abra ABRIR-JP-MINATO.vbs e pressione Ctrl+F5 no navegador.
+5. Na tela WhatsApp do escritório, copie para o campo do número o valor
+   EXATO que a extensão mostrou depois de Conectada.
+6. Clique em Conectar no escritório. Esse botão salva a configuração e
+   refaz o vínculo da estação. Apenas editar o campo não atualiza o vínculo.
+7. Mantenha painel e WhatsApp Web abertos no mesmo perfil do Chrome.
+   Confira se aparece Conectado e teste uma saudação para número conhecido.
+
+Não é preciso reinstalar a extensão 1.17.1.
+A correção rápida não altera o número de versão exibido pelo MVP anterior;
+o pacote completo 1.31.2 inclui a mesma correção e atualiza a identificação.
+
+A mudança vale SOMENTE para o identificador da sua própria conta de envio.
+Os telefones dos municípios não são encurtados nem corrigidos automaticamente.
+Trocar a conta cancela solicitações ainda não enviadas e exige novo vínculo.
+A identificação precisa coincidir exatamente antes da consulta e do envio.
+Se o painel passar a Conectado, isso confirma a conexão da estação, não que
+uma saudação ou PDF já tenham sido enviados. Nenhuma mensagem real foi enviada
+nos testes desta correção.

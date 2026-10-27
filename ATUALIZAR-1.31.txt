@@ -1,0 +1,20 @@
+JP MINATO 1.31 — ATUALIZAR NO ESCRITÓRIO
+
+1. Pare o servidor pelo PARAR-JP-MINATO.vbs (ou botão Parar servidor).
+2. Com o aplicativo parado, faça backup integral da pasta dados.
+3. Extraia o ZIP em uma pasta temporária.
+4. Copie o CONTEÚDO da pasta mvp-jp-minato para a pasta atual do programa.
+   Substitua arquivos do aplicativo e mescle as subpastas. PRESERVE dados.
+   O pacote não tem banco, credenciais ou dados de clientes.
+5. Abra ABRIR-JP-MINATO.vbs e pressione Ctrl+F5 no navegador.
+6. Escolha Jeff, Lara ou Pai na entrada. Use a senha atual quando solicitada.
+7. Use Gerenciar rotas para atribuir responsáveis.
+8. Para receber e-mails: E-mails recebidos > Configurar recebimento.
+   Confirme o servidor IMAP da sua conta com a hospedagem/revenda.
+   Porta 993 SSL/TLS. Salve, teste e sincronize. Consulte o guia HTML.
+
+Acesso de casa: o endereço da NetBird continua o mesmo, com o servidor do
+escritório ligado. Extensão Chrome permanece 1.17.0, sem novos arquivos.
+
+Guia completo: GUIA-ATUALIZACAO-1.31.html
+Não apague dados nem copie dados vazios de outra instalação sobre os seus.

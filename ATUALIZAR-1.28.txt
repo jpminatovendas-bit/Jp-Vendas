@@ -1,0 +1,13 @@
+JP MINATO 1.28 — PDF compacto e páginas A4
+
+1. No computador do escritório, pare o servidor do JP Minato.
+2. Faça uma cópia de segurança da pasta dados inteira.
+3. Extraia o ZIP. Copie TODO o conteúdo da pasta mvp-jp-minato para a pasta onde o programa está instalado, substituindo arquivos do programa. NÃO apague a pasta dados.
+4. Abra ABRIR-JP-MINATO.vbs. No navegador, pressione Ctrl+F5.
+5. Abra um município em Criar PDF / fotos e clique em Gerar PDF final.
+
+Os PDFs novos têm todas as páginas em A4 (210 x 297 mm), inclusive as páginas do catálogo padrão. As fotos dos comparativos são compactadas automaticamente para o tamanho em que aparecem no PDF. As fotos em alta resolução continuam guardadas, sem alteração.
+
+Os PDFs antigos não mudam sozinhos: gere novamente os que quiser atualizar. O PDF padrão cadastrado permanece como está; o programa ajusta o tamanho das páginas na nova saída. Páginas fixas já pesadas continuam influenciando o tamanho final, pois suas fotos não são recomprimidas nesta atualização.
+
+Envio de e-mail com PDF, configuração KingHost, campos de diretor/atendimento e funções anteriores estão incluídos. A extensão continua 1.16.1, sem necessidade de nova configuração.

@@ -1,0 +1,17 @@
+JP Minato 1.31.4 — mesma conta para envio e recebimento
+
+1. Pare o servidor do JP Minato e faça backup da instalação, incluindo dados.
+2. Extraia o pacote e atualize os arquivos do programa. Preserve sua pasta dados e o conteúdo dela; não apague seus cadastros, imagens ou credenciais.
+3. Inicie o programa, atualize a página com Ctrl+F5 e confira a versão 1.31.4.
+4. Abra E-mails recebidos > Configurar recebimento.
+5. Deixe marcada Usar o mesmo e-mail e senha do envio. O endereço é preenchido automaticamente, sem pedir a senha novamente.
+6. Informe o servidor IMAP fornecido pela hospedagem/revenda, mantenha a porta 993 com SSL/TLS e a pasta INBOX. O endereço do servidor IMAP pode ser diferente do SMTP; as credenciais são compartilhadas, os protocolos não.
+7. Salve recebimento e clique em Testar conexão salva. Se aprovado, ative a sincronização automática e sincronize.
+
+Ao mudar o e-mail ou a senha nas configurações de envio, o recebimento vinculado passa a usar os valores atuais. Mensagens já importadas ficam preservadas e separadas por conta; mudar de conta pode mostrar outra caixa, sem excluir o histórico anterior.
+
+A extensão do Chrome continua na versão 1.17.2 e não precisa ser reinstalada para esta mudança.
+
+A opção antiga de conta IMAP independente é preservada para compatibilidade. Para seguir a conta de envio, mantenha a opção recomendada marcada. Sem SMTP configurado, configure o envio primeiro.
+
+Testes locais sem acesso a caixa real. Servidor, senha e acesso IMAP precisam ser conferidos pela conexão salva no escritório.

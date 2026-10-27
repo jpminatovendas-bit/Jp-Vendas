@@ -1,0 +1,11 @@
+# Verificação — JP Minato 1.20.1 / extensão 1.16.1
+
+Solicitação em 19/10/2026: capturar links tel: como DDD + número no telefone escolhido e remover prefixos/parâmetros de e-mails antes de salvar.
+
+- Corrigidos dois pontos: menus phone_chamber/phone_president passam a aceitar contexto link; captura prioriza link tel: quando o campo selecionado é telefone, sem perder seleção de texto como alternativa. E-mail continua priorizando mailto: e captura normaliza o endereço no servidor.
+- No backend, tel: é removido sem diferenciar caixa, sequência codificada é decodificada, parâmetros de ramal/consulta não são concatenados ao número. Normalizador existente valida DDI brasileiro e mantém DDD, formatação e conferência de divergência. Não altera verificação do WhatsApp nem conclui conta ativa pelo link tel:.
+- Exemplo testado nos dois papéis: tel:+55(55) 99997-4126 -> (55) 99997-4126, sem WhatsApp confirmado. Também testado TEL:%2B55%2848%29%203333-1234;ext=999?ignored=55 -> (48) 3333-1234.
+- E-mails removem mailto:/Email:/E-mail: sem diferenciar caixa, decodificam endereço e descartam assunto/corpo/cc. Exemplo camara@sedenova.rs.gov.br mantido sem prefixos/parâmetros e sem duplicação. Presidente continua com um e-mail substituído; Câmara acumula. Múltiplos destinatários e esquemas indevidos não são salvos.
+- 225 testes Python aprovados na execução final, incluindo dois novos testes de regressão com vários casos e destinatários; os demais recursos permanecem cobertos. Teste Node do service worker com Chrome simulado verifica contexto link nos quatro menus, prioridade do href correto sobre texto visível, endpoint/destinatário selecionado e seleção de texto como alternativa. Sintaxe do service worker aprovada.
+- Menu nativo Chrome/Windows não foi executado nesta correção; APIs Chrome foram simuladas. Nenhuma conta real, mensagem, chamada paga ou banco de produção usado.
+- Pacote completo com MVP 1.20.1 e extensão 1.16.1. Instalar com servidor parado, backup integral de dados e mesclagem do conteúdo de mvp-jp-minato na instalação ativa, preservando dados. Recarregar extensão da pasta atualizada e iniciar captura nova pelo município correto. Instruções em ATUALIZAR-1.20.1.txt.

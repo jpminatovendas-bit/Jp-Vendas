@@ -1,0 +1,44 @@
+JP MINATO — ATUALIZAÇÃO DO CATÁLOGO 1.33
+Compatível com o pacote MVP 1.32 entregue neste atendimento.
+
+INSTALAÇÃO
+1. Pare o servidor com PARAR-JP-MINATO.vbs.
+2. Faça uma cópia de segurança da pasta dados.
+3. Copie o conteúdo da pasta mvp-jp-minato deste ZIP para a pasta atual do programa,
+   onde está app.py, substituindo os arquivos e mesclando assets e web.
+   Não apague a pasta dados. Esta atualização não contém dados de clientes.
+4. Reabra com ABRIR-JP-MINATO.vbs e pressione Ctrl+F5 no navegador.
+5. Abra Criar PDF de um município, confira os vereadores selecionados e o brasão,
+   e gere novamente o PDF. Não é necessário atualizar a extensão do Chrome.
+
+NOVO CATÁLOGO
+- Usa o layout de Catalogo Base.pdf fornecido pelo usuário.
+- Página 1: antes e depois ampliados do primeiro vereador selecionado, que também
+  aparece no canto superior esquerdo da página seguinte. Nome e UF são dinâmicos.
+- Página 2: até nove vereadores, com fotos originais, tratadas e nomes do projeto.
+- Todos os brasões das páginas personalizadas são o MESMO arquivo cadastrado em
+  Criar PDF para aquele município. Nenhum brasão do modelo fica fixo nessas páginas.
+- As páginas 3 a 10 são as oito páginas finais do Catalogo Base.pdf, sem redesenho.
+- São mantidas as dimensões exatas do modelo: 595,5 x 842,25 pontos.
+- Mais de nove vereadores geram páginas adicionais de comparativos antes do
+  complemento. Portanto, o catálogo pode ter mais de dez páginas nesse caso.
+- Nome do PDF final: Município Vereadores 2005 a 2008.pdf.
+  Exemplo: Alecrim Vereadores 2005 a 2008.pdf.
+- Cada geração fica em uma pasta própria para preservar PDFs e históricos anteriores,
+  mesmo que o nome do arquivo seja igual. Prévia recebe o prefixo PREVIA - .
+- PDFs antigos permanecem guardados, mas o aplicativo pede nova geração antes de
+  utilizá-los como catálogo atual para envio. O histórico anterior é mantido.
+- A geração do PDF não envia mensagens nem e-mails.
+
+COMPLEMENTO DO CATÁLOGO
+A atualização adota como complemento as páginas 3 a 10 do arquivo enviado,
+substituindo o uso de complementos configurados antes desta versão.
+Se depois quiser outro complemento, importe somente as páginas adicionais em
+Configurações > PDF padrão, para não duplicar capa e comparativos.
+
+VALIDAÇÃO
+Testado localmente com o gerador real do MVP: fotos e textos dinâmicos, brasão,
+nome longo de município, mais de nove vereadores, prévia, dimensões, nome do
+arquivo e preservação de PDFs anteriores. As oito páginas finais do exemplo
+foram renderizadas e comparadas pixel a pixel com o PDF original, sem diferença.
+A instalação no Windows e os dados reais do escritório não foram acessados.

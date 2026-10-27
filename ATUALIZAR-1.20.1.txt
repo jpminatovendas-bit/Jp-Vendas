@@ -1,0 +1,17 @@
+JP MINATO — MVP 1.20.1 / EXTENSÃO 1.16.1
+
+1. Pare o programa e faça backup da pasta dados inteira.
+2. Extraia o ZIP e copie o conteúdo de mvp-jp-minato para a instalação atual, mesclando e substituindo os arquivos do aplicativo. NÃO APAGUE DADOS.
+3. Abra ABRIR-JP-MINATO e pressione Ctrl+F5 no navegador.
+4. Abra chrome://extensions e clique em Recarregar na extensão JP Minato. Confira versão 1.16.1. Se a extensão usa outra pasta, substitua também os arquivos daquela pasta ou carregue extensao-chrome da instalação atual.
+5. No MVP, abra o município correto e inicie uma captura nova pelo botão do site.
+
+Clique com direito no link tel: e escolha Telefone da Câmara ou Telefone do presidente.
+tel:+55(55) 99997-4126 -> (55) 99997-4126
+O telefone precisa ter DDD e formato válidos. DDD fora da referência continua exigindo conferência. Um link de ligação não confirma WhatsApp.
+
+Para e-mail, clique no link mailto: ou selecione o endereço e escolha Câmara ou presidente.
+mailto:camara@sedenova.rs.gov.br?subject=Contato -> camara@sedenova.rs.gov.br
+Assunto, corpo e cc não são salvos. Uma captura deve conter somente um destinatário.
+
+O e-mail do presidente substitui o anterior; e-mails da Câmara são acrescentados sem duplicação. A captura continua restrita à aba e ao município vinculados pelo MVP.

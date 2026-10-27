@@ -1,0 +1,45 @@
+JP MINATO — MAPA SIMPLIFICADO — MVP 1.36
+
+INSTALAÇÃO
+1. Feche as janelas do mapa e pare o servidor JP Minato.
+2. Faça uma cópia de segurança da pasta dados.
+3. Copie o conteúdo da pasta mvp-jp-minato deste pacote para a pasta atual do programa (onde está app.py). Substitua os arquivos e mescle web e assets. Preserve sua pasta dados.
+4. Inicie o programa, pressione Ctrl+F5 e confira MVP 1.36 no topo. Abra uma nova janela do mapa.
+Este pacote reúne as atualizações anteriores do catálogo, e-mail, saudação e verificação de WhatsApp. Não contém banco ou dados de demonstração.
+
+EXTENSÃO
+A extensão continua na versão 1.18.0. Se já estiver usando essa versão, não precisa alterar a extensão.
+A pasta extensao-chrome contém a versão completa para quem ainda precisa atualizar: substitua os arquivos na pasta da extensão instalada e clique em Recarregar em chrome://extensions. Reabra as abas do site e da estação do escritório. Reconecte se o programa solicitar.
+
+COMO USAR O MAPA
+Abra Mapa comercial / galerias. A janela é ampla e permanece separada da lista principal.
+
+AVALIAR CIDADES
+- Passe o mouse sobre o território para consultar os dados salvos.
+- Clique na cidade para editar no painel lateral.
+- Verde: alta. Verde claro: média. Cinza: baixa. Sem preenchimento forte: não avaliada.
+- A abertura é registrada automaticamente. Contorno pontilhado identifica uma cidade já aberta; isso não atribui probabilidade nem confirma que a análise foi concluída.
+- Escolha a probabilidade diretamente nos três botões coloridos.
+- Marque condições existentes ou use + Adicionar condição para incluir uma descrição personalizada.
+- Descreva O que existe hoje. O salvamento é automático durante a edição e antes de trocar de cidade. Aguarde a indicação Salvo automaticamente.
+- Se houver falha, a troca é interrompida e os dados continuam no painel. Confira a mensagem e tente novamente.
+- Abrir site vincula a aba à cidade para capturar pela extensão.
+- No site, botão direito na foto ou link → JP Minato → Galeria atual.
+- Envie uma foto do computador ou clique na área de captura e pressione Ctrl+V para colar uma imagem da área de transferência.
+- Fotos enviadas ou coladas são guardadas como arquivos no sistema. Fotos capturadas da página mantêm a URL; para guardar uma cópia permanente, envie o arquivo.
+- Links também podem ser adicionados manualmente na seção recolhida do painel.
+- A probabilidade é uma avaliação comercial manual; a aparência da galeria não comprova interesse ou orçamento.
+
+CRIAR ROTEIRO
+- Clique em Criar roteiro e depois nas cidades do mapa. Um novo clique retira a cidade.
+- Os números mostram a ordem do roteiro. Use as setas laterais para reorganizar.
+- Dê um nome e clique em Salvar roteiro. Data, responsável e situação são opcionais e ficam na seção recolhida.
+- Roteiros salvos podem ser reabertos para edição. Não alteram as rotas comerciais por raio.
+- O filtro Rota existente usa as rotas comerciais já cadastradas. Também é possível localizar uma cidade pelo nome.
+- A linha é indicativa, sem cálculo de percurso por estrada ou otimização automática.
+
+VISUALIZAÇÃO
+A cobertura continua sendo o mapa RS já existente. Os nomes aparecem a partir do zoom 10 quando couberem dentro do território, sem sobreposição. Territórios pequenos podem exigir mais zoom.
+
+VALIDAÇÃO
+Verificados em ambiente local: cores, resumo ao passar o mouse, registro de abertura, salvamento na troca de município, condições personalizadas, envio e colagem de imagem, link pela extensão, preservação da edição quando chega captura, roteiros por clique/ordem, nomes com zoom, persistência e proteção contra falha de salvamento. Os testes não enviam mensagens reais.
