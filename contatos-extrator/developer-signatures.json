@@ -1,0 +1,424 @@
+[
+  {
+    "id": "bigdream_",
+    "developer": "BigDream.",
+    "cms": "BigDream.",
+    "patterns": [
+      "bigdreamagencia.com.br",
+      "www.bigdreamagencia.com.br",
+      "bigdreamagencia",
+      "bigdream.",
+      "www.bigdream."
+    ],
+    "sampleChamber": "TUPANDI - RS",
+    "createdAt": "2026-09-06T22:22:23.750Z"
+  },
+  {
+    "id": "copyright",
+    "developer": "Copyright",
+    "cms": "Copyright",
+    "patterns": [],
+    "sampleChamber": "",
+    "createdAt": "2026-09-06T22:12:00.320Z"
+  },
+  {
+    "id": "atelie_influence",
+    "developer": "Atelie influence",
+    "cms": "Atelie influence",
+    "patterns": [
+      "influenceagenciadigital.com.br",
+      "www.influenceagenciadigital.com.br",
+      "influenceagenciadigital",
+      "atelieinfluence.com.br",
+      "www.atelieinfluence.com.br",
+      "atelieinfluence"
+    ],
+    "sampleChamber": "AMETISTA DO SUL - RS",
+    "createdAt": "2026-09-06T12:28:09.185Z"
+  },
+  {
+    "id": "l9web",
+    "developer": "l9web",
+    "cms": "L9web",
+    "patterns": [
+      "https://www.l9web.com.br/",
+      "www.l9web.com.br",
+      "l9web.com.br",
+      "l9web"
+    ],
+    "sampleChamber": "",
+    "createdAt": "2026-09-05T15:17:14.882Z"
+  },
+  {
+    "id": "nao_identificado",
+    "developer": "Não identificado",
+    "cms": "Não identificado",
+    "patterns": [],
+    "sampleChamber": "",
+    "createdAt": "2026-09-05T15:11:25.135Z"
+  },
+  {
+    "id": "eprocleg___tecnologia_legislat",
+    "developer": "EprocLeg / Tecnologia Legislativa",
+    "cms": "EprocLeg",
+    "patterns": [
+      "eprocleg",
+      "eprocleg.com.br",
+      "www.eprocleg.com.br"
+    ],
+    "sampleChamber": "ERECHIM - RS",
+    "createdAt": "2026-09-05T14:40:24.655Z"
+  },
+  {
+    "id": "webde",
+    "developer": "webde",
+    "cms": "Webde",
+    "patterns": [
+      "webde.com.br",
+      "webde"
+    ],
+    "sampleChamber": "BOA VISTA DO SUL - RS",
+    "createdAt": "2026-09-02T22:29:48.611Z"
+  },
+  {
+    "id": "visao_camaras",
+    "developer": "Visão Câmaras",
+    "cms": "Visão Câmaras",
+    "patterns": [
+      "https://www.visaoi.com.br/",
+      "www.icamaras.com.br",
+      "visaoi.com.br",
+      "icamaras"
+    ],
+    "sampleChamber": "CÂMARA TESTE",
+    "createdAt": "2026-09-02T22:25:01.192Z"
+  },
+  {
+    "id": "dynamika",
+    "developer": "Dynamika Soluções Web Ltda",
+    "cms": "Dynamika",
+    "patterns": [
+      "www.dynamika.com.br",
+      "dynamika.com.br",
+      "dynamika",
+      "dynamika-menu"
+    ],
+    "sampleChamber": "",
+    "createdAt": "2026-09-02T10:00:00.000Z"
+  },
+  {
+    "id": "cittatec",
+    "developer": "CittaTec Tecnologia",
+    "cms": "CittaTec",
+    "patterns": [
+      "cittatec",
+      "città - inteligência em gestão pública",
+      "citta inteligência",
+      "citta inteligencia",
+      "cittatec.com.br",
+      "www.cittatec.com.br",
+      "cittatec tecnologia"
+    ],
+    "sampleChamber": "ERECHIM - RS",
+    "createdAt": "2026-09-02T10:00:00.000Z"
+  },
+  {
+    "id": "softcam",
+    "developer": "Softcam Informática",
+    "cms": "Softcam",
+    "patterns": [
+      "funcs_site",
+      "link-softcam",
+      "pbw_",
+      "softcam.com.br",
+      "softcam informática",
+      "softcam"
+    ],
+    "sampleChamber": "Diversas Câmaras RS",
+    "createdAt": "2026-09-02T10:00:00.000Z"
+  },
+  {
+    "id": "sapl",
+    "developer": "Interlegis / Senado Federal",
+    "cms": "Portal Interlegis (Plone)",
+    "patterns": [
+      "portal modelo",
+      "resourceportalmodelo",
+      "theme++portalmodelo",
+      "plonecustom",
+      "sapl",
+      "openlegis"
+    ],
+    "sampleChamber": "BARÃO - RS",
+    "createdAt": "2026-09-02T10:00:00.000Z"
+  },
+  {
+    "id": "insaite_digital",
+    "developer": "Insaite Digital",
+    "cms": "Insaite Digital",
+    "patterns": [
+      "insaite digital",
+      "insaite.com.br",
+      "insaitedigital",
+      "_insaite",
+      "insaite"
+    ],
+    "sampleChamber": "BARÃO DE COTEGIPE - RS",
+    "createdAt": "2026-09-03T18:00:00.000Z"
+  },
+  {
+    "id": "abase_sistemas_e_solucoes_ltda",
+    "developer": "Abase Sistemas e Soluções LTDA",
+    "cms": "Abase Sistemas",
+    "patterns": [
+      "abase.com.br",
+      "www.abase.com.br",
+      "abase sistemas",
+      "abase"
+    ],
+    "sampleChamber": "BOA VISTA DO BURICÁ - RS",
+    "createdAt": "2026-09-02T21:31:37.097Z"
+  },
+  {
+    "id": "eprocleg",
+    "developer": "Eprocleg",
+    "cms": "Eprocleg",
+    "patterns": [
+      "eprocleg.com.br",
+      "www.eprocleg.com.br",
+      "eprocleg"
+    ],
+    "sampleChamber": "ERECHIM - RS",
+    "createdAt": "2026-09-02T10:00:00.000Z"
+  },
+  {
+    "id": "betha",
+    "developer": "Betha Sistemas",
+    "cms": "Betha Fly",
+    "patterns": [
+      "betha.com.br",
+      "flye-",
+      "betha sistemas",
+      "betha"
+    ],
+    "sampleChamber": "Diversas Câmaras SC/RS",
+    "createdAt": "2026-09-02T10:00:00.000Z"
+  },
+  {
+    "id": "dbseller",
+    "developer": "DBSeller",
+    "cms": "e-Cidade Legislativo",
+    "patterns": [
+      "dbseller.com.br",
+      "dbseller",
+      "ecidade",
+      "portal-ecidade"
+    ],
+    "sampleChamber": "Diversas Câmaras RS",
+    "createdAt": "2026-09-02T10:00:00.000Z"
+  },
+  {
+    "id": "govbr",
+    "developer": "GovBR / Governança Brasil",
+    "cms": "GovBR Portal",
+    "patterns": [
+      "govbr.com.br",
+      "govbr",
+      "governancabrasil"
+    ],
+    "sampleChamber": "Diversas Câmaras RS",
+    "createdAt": "2026-09-02T10:00:00.000Z"
+  },
+  {
+    "id": "dueto",
+    "developer": "Dueto Tecnologia",
+    "cms": "Dueto Web",
+    "patterns": [
+      "duetotecnologia.com.br",
+      "dueto tecnologia",
+      "duetotecnologia"
+    ],
+    "sampleChamber": "Diversas Câmaras RS",
+    "createdAt": "2026-09-02T10:00:00.000Z"
+  },
+  {
+    "id": "innovareweb",
+    "developer": "InnovareWeb",
+    "cms": "InnovareWeb",
+    "patterns": [
+      "innovareweb.com.br",
+      "innovareweb"
+    ],
+    "sampleChamber": "ALPESTRE - RS",
+    "createdAt": "2026-09-02T21:35:03.062Z"
+  },
+  {
+    "id": "_addesign",
+    "developer": "#adDesign",
+    "cms": "#adDesign",
+    "patterns": [
+      "addesign.com.br",
+      "#addesign",
+      "addesign"
+    ],
+    "sampleChamber": "ALMIRANTE TAMANDARÉ DO SUL - RS",
+    "createdAt": "2026-09-02T21:33:54.033Z"
+  },
+  {
+    "id": "slah_informatica",
+    "developer": "Slah Informática",
+    "cms": "Slah Informática",
+    "patterns": [
+      "slah.com.br",
+      "slah informática",
+      "slah informatica",
+      "slah"
+    ],
+    "sampleChamber": "ANDRÉ DA ROCHA - RS",
+    "createdAt": "2026-09-02T21:40:18.093Z"
+  },
+  {
+    "id": "citta___inteligencia_em_gestao",
+    "developer": "Città - Inteligência em Gestão Pública",
+    "cms": "CittaTec",
+    "patterns": [
+      "città - inteligência em gestão pública",
+      "citta inteligência",
+      "citta inteligencia"
+    ],
+    "sampleChamber": "BARRA DO RIBEIRO - RS",
+    "createdAt": "2026-09-02T21:08:30.736Z"
+  },
+  {
+    "id": "rs_informatica",
+    "developer": "RS Informática",
+    "cms": "RS Informática",
+    "patterns": [
+      "rs informática",
+      "rs informatica",
+      "desenvolvido por rs informática",
+      "desenvolvido por rs informatica"
+    ],
+    "sampleChamber": "BARÃO DO TRIUNFO - RS",
+    "createdAt": "2026-09-03T11:00:00.000Z"
+  },
+  {
+    "id": "king_page",
+    "developer": "King Page",
+    "cms": "King Page",
+    "patterns": [
+      "kingpage.com.br",
+      "king page",
+      "king-page"
+    ],
+    "sampleChamber": "BOZANO - RS",
+    "createdAt": "2026-09-02T21:44:28.641Z"
+  },
+  {
+    "id": "cmpa",
+    "developer": "CMPA",
+    "cms": "CMPA",
+    "patterns": [
+      "cmpa"
+    ],
+    "sampleChamber": "BRAGA - RS",
+    "createdAt": "2026-09-02T21:42:43.428Z"
+  },
+  {
+    "id": "delta_ti",
+    "developer": "Delta TI",
+    "cms": "Delta Legislativo",
+    "patterns": [
+      "deltati.com.br",
+      "delta global",
+      "delta sistemas"
+    ],
+    "sampleChamber": "",
+    "createdAt": "2026-09-04T10:00:00.000Z"
+  },
+  {
+    "id": "ipm_sistemas",
+    "developer": "IPM Sistemas",
+    "cms": "Atende.Net",
+    "patterns": [
+      "ipm.com.br",
+      "atende.net",
+      "ipm sistemas"
+    ],
+    "sampleChamber": "",
+    "createdAt": "2026-09-04T10:00:00.000Z"
+  },
+  {
+    "id": "sonner_sistemas",
+    "developer": "Sonner Sistemas",
+    "cms": "Sonner Portal",
+    "patterns": [
+      "sonner.com.br",
+      "sonner sistemas"
+    ],
+    "sampleChamber": "",
+    "createdAt": "2026-09-04T10:00:00.000Z"
+  },
+  {
+    "id": "thema_informatica",
+    "developer": "Thema Informática",
+    "cms": "Thema Portal",
+    "patterns": [
+      "thema.inf.br",
+      "thema informática",
+      "thema informatica"
+    ],
+    "sampleChamber": "",
+    "createdAt": "2026-09-04T10:00:00.000Z"
+  },
+  {
+    "id": "plenaria_sistemas",
+    "developer": "Plenária Sistemas",
+    "cms": "Plenária Sistemas",
+    "patterns": [
+      "plenariasistemas.com.br",
+      "plenária sistemas",
+      "plenaria sistemas"
+    ],
+    "sampleChamber": "",
+    "createdAt": "2026-09-04T10:00:00.000Z"
+  },
+  {
+    "id": "siganet",
+    "developer": "Siganet",
+    "cms": "Siganet",
+    "patterns": [
+      "siganet.net.br",
+      "siganet"
+    ],
+    "sampleChamber": "",
+    "createdAt": "2026-09-04T10:00:00.000Z"
+  },
+  {
+    "id": "bigdream",
+    "developer": "BigDream",
+    "cms": "BigDream / WordPress",
+    "patterns": [
+      "bigdreamagencia.com.br",
+      "bigdreamagencia",
+      "bigdream",
+      "big dream",
+      "bigdrem"
+    ],
+    "sampleChamber": "HARMONIA - RS",
+    "createdAt": "2026-09-06T15:45:00.000Z"
+  },
+  {
+    "id": "portal_da_transparencia",
+    "developer": "Portal da Transparência",
+    "cms": "Portal da Transparência",
+    "patterns": [
+      "portaldatransparencia",
+      "portal da transparencia",
+      "portal da transparência",
+      "transparencia"
+    ],
+    "sampleChamber": "Aratiba - RS",
+    "updatedAt": "2026-09-08T16:01:33.766Z"
+  }
+]

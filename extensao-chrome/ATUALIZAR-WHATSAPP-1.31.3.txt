@@ -1,0 +1,20 @@
+JP Minato 1.31.3 + extensão 1.17.2 — conferência do destinatário
+
+ATUALIZAÇÃO NO PC DO ESCRITÓRIO
+1. Pare o servidor do JP Minato. Fechar apenas a aba do navegador não para o servidor.
+2. Faça uma cópia de segurança da pasta do programa, incluindo dados.
+3. Extraia o pacote completo e copie os arquivos do programa para a instalação atual. Preserve a pasta dados e seus arquivos. Não apague nem substitua seus dados por uma pasta vazia.
+4. No Chrome usado pelo WhatsApp Web, abra chrome://extensions. Atualize os arquivos da pasta da extensão instalada e clique em Recarregar. A versão deve ser 1.17.2. Se a pasta mudou, remova somente a extensão antiga e use Carregar sem compactação na nova pasta extensao-chrome.
+5. Feche as abas do painel da estação e do WhatsApp Web. Abra novamente o WhatsApp Web no mesmo perfil.
+6. Inicie o MVP, atualize sua página com Ctrl+F5 e confira a versão 1.31.3. Em configurações de WhatsApp, mantenha o número exato da conta detectada e clique em Conectar no escritório. Deixe o painel e o WhatsApp Web abertos.
+7. Faça nova tentativa em um contato autorizado. Tentativas inconclusivas anteriores não são reenviadas automaticamente.
+
+O QUE MUDA
+- A consulta pode devolver o telefone canônico com oito dígitos ou um identificador interno LID. Só usa o destino quando o retorno comprova o vínculo previsto.
+- Não altera o número salvo na ficha. O destino canônico fica separado no registro de conferência.
+- Um retorno vazio permanece inconclusivo: não significa que o telefone não tem WhatsApp e não apaga confirmações anteriores.
+- Se o retorno não corresponder, mostra solicitado e retornado para diagnóstico, sem enviar.
+- É necessário atualizar o servidor e a extensão juntos.
+
+LIMITES
+Testes com Chrome/WhatsApp simulados e backend real; nenhuma mensagem real foi enviada durante o desenvolvimento. A sessão real ainda precisa ser conferida no escritório. Cada clique autoriza uma saudação em texto; esta atualização não anexa PDF.

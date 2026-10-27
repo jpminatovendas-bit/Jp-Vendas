@@ -1,0 +1,1720 @@
+[
+  {
+    "id": "softcam",
+    "developer": "Softcam Informática",
+    "cms": "Softcam",
+    "description": "No Softcam não há link /presidente dedicado. O portal carrega no menu Vereadores via requisição AJAX (/ajax/header_menu/Vereadores) o submenu 'Mesa Diretora Atual'. O membro com cargo 'Presidente' contém o link para seu perfil individual (/camara/membros/show/ID). Na página do perfil constam Nome Completo, Nome Político, Partido, Celular, Telefone e E-mail.",
+    "sampleChambers": [
+      "ALEGRETE - RS",
+      "SANTIAGO - RS",
+      "SÃO FRANCISCO DE ASSIS - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/site/mesas",
+        "/ajax/header_menu/Vereadores",
+        "/camara/membros/exercicio/0",
+        "/camara/membros",
+        ".br/portal-legislativo/mesa"
+      ],
+      "menuSelector": "a:contains('Vereadores')",
+      "containerType": "direct_page"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".list-submenu-item",
+      "roleSelector": ".list-title-avatar",
+      "nameSelector": ".list-description",
+      "linkSelector": "a.list-submenu-link, a[href*='/camara/membros/show/']",
+      "avatarSelector": "img.avatar-img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "/camara/membros/show/",
+      "nomeCompletoPattern": "<strong>Nome Completo:?\\s*<\\/strong>\\s*([^<\\n\\r]+)",
+      "nomePoliticoPattern": "<strong>Nome Político:?\\s*<\\/strong>\\s*([^<\\n\\r]+)",
+      "partidoPattern": "<strong>Partido:?\\s*<\\/strong>\\s*([^<\\n\\r]+)",
+      "celularPattern": "<strong>Celular:?\\s*<\\/strong>\\s*([^<\\n\\r]+)",
+      "telefonePattern": "<strong>Telefone:?\\s*<\\/strong>\\s*([^<\\n\\r]+)",
+      "emailPattern": "<strong>E-mail:?\\s*<\\/strong>\\s*([^<\\n\\r]+)",
+      "nascimentoPattern": "<strong>Nascimento:?\\s*<\\/strong>\\s*([^<\\n\\r]+)",
+      "estadoCivilPattern": "<strong>Estado Civil:?\\s*<\\/strong>\\s*([^<\\n\\r]+)",
+      "biografiaPattern": "Biografia da Vereadora|Biografia do Vereador",
+      "mandatoPattern": "ocupou o cargo de Presidente na Mesa Diretora",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ],
+      "phonePattern": "(?:Telefone|Fone):?\\s*([0-9() -]{8,20})",
+      "ouvidoriaPattern": "Ouvidoria:?\\s*([0-9() -]{8,20})",
+      "whatsappPattern": "whatsapp|wa\\.me|api\\.whatsapp"
+    },
+    "updatedAt": "2026-09-06T20:27:22.062Z"
+  },
+  {
+    "id": "cittatec",
+    "developer": "CittaTec Tecnologia",
+    "cms": "CittaTec",
+    "description": "No CittaTec a Mesa Diretora fica na rota /portal-legislativo/mesa e /portal-legislativo/parlamentares. Cada membro possui um card com nome, partido e link direto para detalhes da pessoa (/portal-legislativo/mesa/pessoas/ID) ou botão direto de WhatsApp.",
+    "sampleChambers": [
+      "ARAMBARÉ - RS",
+      "SENTINELA DO SUL - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/portal-legislativo/mesa",
+        "/portal-legislativo/parlamentares",
+        "/portal-legislativo/vereadores"
+      ],
+      "menuSelector": "a[href*='portal-legislativo']",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, a[href*='/portal-legislativo/mesa/pessoas/']",
+      "roleSelector": ".cargo, strong, b",
+      "nameSelector": ".nome, h3, h4",
+      "linkSelector": "a[href*='/portal-legislativo/mesa/pessoas/'], a[href*='/portal-legislativo/parlamentares/']",
+      "avatarSelector": "img",
+      "presidentRolePattern": "presidente"
+    },
+    "profileExtraction": {
+      "urlPattern": "/portal-legislativo/",
+      "nomeCompletoPattern": "<h[123][^>]*>\\s*([A-ZÀ-Ú\\s]{4,40})\\s*-\\s*([A-Z]{2,10})",
+      "nomePoliticoPattern": "Nome:\\s*([^<\\n\\r]+)",
+      "partidoPattern": "-\\s*([A-Z]{2,10})<",
+      "celularPattern": "(?:Celular|WhatsApp|Contato):?\\s*([0-9() -]{8,20})",
+      "telefonePattern": "(?:Telefone|Fone):?\\s*([0-9() -]{8,20})",
+      "emailPattern": "([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,})",
+      "biografiaPattern": "Biografia",
+      "mandatoPattern": "Biênio|Exercício|Legislatura",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/portal-legislativo/contato",
+        "/contato"
+      ],
+      "phonePattern": "(?:Telefone|Fone):?\\s*([0-9() -]{8,20})",
+      "whatsappPattern": "api\\.whatsapp\\.com|wa\\.me"
+    },
+    "updatedAt": "2026-09-04T12:30:00.000Z"
+  },
+  {
+    "id": "sapl",
+    "developer": "Interlegis / Senado Federal",
+    "cms": "Portal Interlegis (Plone / SAPL)",
+    "description": "No SAPL / OpenLegis, a Mesa Diretora é exibida em tabela estruturada em /mesa-diretora/ ou /sapl/mesa-diretora/. As linhas contêm a Foto na 1ª coluna, o Nome do Parlamentar com link na 2ª coluna (/parlamentar/ID), o Partido na 3ª coluna e o Cargo na 4ª coluna (Presidente, Vice-Presidente, etc.). No perfil individual constam Nome Completo, Partido, E-mail e Celular com WhatsApp na Biografia.",
+    "sampleChambers": [
+      "BOM RETIRO - SC",
+      "AGUDO - RS",
+      "ALEGRIA - RS"
+    ],
+    "alternativeForms": [
+      {
+        "id": "form_sapl_tabela",
+        "name": "Tabela Padrão SAPL (Link no Nome)",
+        "description": "Linhas de tabela HTML onde a 1ª coluna é a foto, 2ª coluna é o Nome com link do perfil /parlamentar/, 3ª coluna é o Partido e 4ª coluna é o Cargo (Presidente).",
+        "clickTarget": "name_link",
+        "containerType": "table",
+        "mesaRoutes": [
+          "/mesa-diretora/",
+          "/sapl/mesa-diretora/"
+        ],
+        "mesaItemSelector": "table tr, tbody tr, tr",
+        "mesaRoleSelector": "td:last-child, td:nth-child(4), .cargo",
+        "mesaNameSelector": "td:nth-child(2) a, a[href*='/parlamentar/'], td a",
+        "mesaLinkSelector": "td:nth-child(2) a, a[href*='/parlamentar/'], td a",
+        "mesaPresidentPattern": "^presidente\\b",
+        "extractFromBio": true,
+        "ignoreChamberPhoneForPresident": true
+      },
+      {
+        "id": "form_sapl_cards",
+        "name": "Cards em Grade (Link na Foto ou Perfil)",
+        "description": "Layout de cards em grade onde cada card representa um membro da Mesa com foto clicável ou botão de perfil.",
+        "clickTarget": "photo",
+        "containerType": "cards",
+        "mesaRoutes": [
+          "/mesa-diretora/",
+          "/parlamentar/",
+          "/sapl/parlamentar/"
+        ],
+        "mesaItemSelector": ".card, .thumbnail, .parlamentar-card, .tileItem, .col-md-3, .col-sm-6",
+        "mesaRoleSelector": ".cargo, .badge, .funcao, p.lead",
+        "mesaNameSelector": "h4, h5, .nome, .titulo, a[href*=\"/parlamentar/\"]",
+        "mesaLinkSelector": "a:has(img), a[href*=\"/parlamentar/\"], a.btn, a",
+        "mesaPresidentPattern": "^presidente\\b",
+        "extractFromBio": true,
+        "ignoreChamberPhoneForPresident": true
+      }
+    ],
+    "activeFormId": "form_sapl_tabela",
+    "ignoreChamberPhoneForPresident": true,
+    "navigation": {
+      "routes": [
+        "/mesa-diretora/",
+        "/sapl/mesa-diretora/",
+        "/parlamentar/",
+        "/sapl/parlamentar/",
+        "/institucional/estrutura/mesa-diretora-1",
+        "/institucional/estrutura/mesa-diretora"
+      ],
+      "menuSelector": "a[href*='mesa-diretora']",
+      "containerType": "table"
+    },
+    "mesaDiretora": {
+      "itemSelector": "table tr, tbody tr, tr, .tileItem, .membro",
+      "roleSelector": "td:last-child, td:nth-child(4), .cargo, dt",
+      "nameSelector": "td:nth-child(2) a, a[href*='/parlamentar/'], td a, .nome",
+      "linkSelector": "td:nth-child(2) a, a[href*='/parlamentar/'], td a, a[href*='membros']",
+      "avatarSelector": "td:first-child img, img.img-thumbnail, img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "/parlamentar/",
+      "nomeCompletoPattern": "Nome Completo:?\\s*(?:<[^>]+>|\\s)*([^<\\n\\r]+)",
+      "nomePoliticoPattern": "Nome Parlamentar:?\\s*(?:<[^>]+>|\\s)*([^<\\n\\r]+)",
+      "partidoPattern": "Partido:?\\s*(?:<[^>]+>|\\s)*([A-Za-z0-9À-ú\\s\\/-]{2,20})",
+      "celularPattern": "(?:📱|WhatsApp|Celular):?\\s*([0-9() -]{8,20})",
+      "telefonePattern": "(?:Telefone|Fone|Gabinete):?\\s*([0-9() -]{8,20})",
+      "emailPattern": "([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,})",
+      "biografiaPattern": "Biografia",
+      "mandatoPattern": "Legislatura|Exercício",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ],
+      "phonePattern": "(?:Telefone|Fone):?\\s*([0-9() -]{8,20})",
+      "whatsappPattern": "whatsapp|wa\\.me"
+    },
+    "updatedAt": "2026-09-16T12:00:00.000Z"
+  },
+  {
+    "id": "eprocleg",
+    "developer": "EprocLeg / Tecnologia Legislativa",
+    "cms": "EprocLeg",
+    "description": "No EprocLeg, a Mesa Diretora fica em /mesa-diretora ou /legislativo/mesa-diretora. Os cards de vereadores trazem o cargo na mesa (Presidente), nome e o telefone/WhatsApp diretamente na página da Mesa ou no perfil.",
+    "sampleChambers": [
+      "BOM PRINCÍPIO - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/processolegislativo-mesadiretora",
+        "/mesa-diretora",
+        "/legislativo/mesa-diretora",
+        "/vereadores",
+        "/parlamentares"
+      ],
+      "menuSelector": "a[href*='mesa-diretora']",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .box-vereador, .col-md-4, tr, div[class*='vereador'], div[class*='membro']",
+      "roleSelector": ".cargo, .badge, strong, .funcao, p",
+      "nameSelector": "h4, h5, .nome, a, strong",
+      "linkSelector": "a[href*='vereador'], a[href*='detalhes'], a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "presidente"
+    },
+    "profileExtraction": {
+      "urlPattern": "/vereador",
+      "nomeCompletoPattern": "Nome:?\\s*([^<\\n\\r]+)",
+      "nomePoliticoPattern": "",
+      "partidoPattern": "Partido:?\\s*([A-Z0-9]{2,10})",
+      "celularPattern": "(?:Celular|WhatsApp):?\\s*([0-9() -]{8,20})",
+      "telefonePattern": "Telefone:?\\s*([0-9() -]{8,20})",
+      "emailPattern": "([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,})",
+      "nascimentoPattern": "",
+      "estadoCivilPattern": "",
+      "biografiaPattern": "",
+      "mandatoPattern": "",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato"
+      ],
+      "phonePattern": "(?:Telefone|Fone):?\\s*([0-9() -]{8,20})",
+      "ouvidoriaPattern": "",
+      "whatsappPattern": "whatsapp|wa\\.me"
+    },
+    "updatedAt": "2026-09-08T15:46:18.972Z"
+  },
+  {
+    "id": "rsinformatica",
+    "developer": "RS Informática",
+    "cms": "RS Informática",
+    "description": "No Portal da RS Informática, as informações da mesa diretora e vereadores ficam nas rotas /mesa-diretora e /parlamentares com cards detalhados por legislatura e telefones de gabinete.",
+    "sampleChambers": [
+      "BARÃO DO TRIUNFO - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/parlamentares",
+        "/vereadores",
+        "/institucional/mesa-diretora"
+      ],
+      "menuSelector": "a[href*='mesa-diretora']",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr",
+      "roleSelector": ".cargo, strong, b",
+      "nameSelector": "h3, h4, .nome, a",
+      "linkSelector": "a[href*='parlamentar'], a[href*='vereador']",
+      "avatarSelector": "img",
+      "presidentRolePattern": "presidente"
+    },
+    "profileExtraction": {
+      "urlPattern": "/parlamentar",
+      "nomeCompletoPattern": "Nome Completo:?\\s*([^<\\n\\r]+)",
+      "partidoPattern": "Partido:?\\s*([A-Z0-9]{2,10})",
+      "celularPattern": "Celular:?\\s*([0-9() -]{8,20})",
+      "telefonePattern": "Telefone:?\\s*([0-9() -]{8,20})",
+      "emailPattern": "([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,})",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ],
+      "phonePattern": "Telefone:?\\s*([0-9() -]{8,20})",
+      "whatsappPattern": "whatsapp|wa\\.me"
+    },
+    "updatedAt": "2026-09-04T12:30:00.000Z"
+  },
+  {
+    "id": "dynamika",
+    "developer": "Dynamika Soluções Web Ltda",
+    "cms": "Dynamika",
+    "description": "Nos portais Dynamika, a mesa diretora fica em /vereadores ou /mesa-diretora na seção institucional com fichas completas de cada parlamentar.",
+    "sampleChambers": [
+      "CARAÁ - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/vereadores",
+        "/mesa-diretora",
+        "/institucional/mesa-diretora",
+        "/legislativo/mesa-diretora"
+      ],
+      "menuSelector": "a[href*='vereadores']",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .box-vereador, .item, tr",
+      "roleSelector": ".cargo, strong, b",
+      "nameSelector": "h3, h4, .nome, a",
+      "linkSelector": "a[href*='vereador'], a[href*='parlamentar']",
+      "avatarSelector": "img",
+      "presidentRolePattern": "presidente"
+    },
+    "profileExtraction": {
+      "urlPattern": "/vereador",
+      "nomeCompletoPattern": "Nome:?\\s*([^<\\n\\r]+)",
+      "partidoPattern": "Partido:?\\s*([A-Z0-9]{2,10})",
+      "celularPattern": "Celular:?\\s*([0-9() -]{8,20})",
+      "telefonePattern": "Telefone:?\\s*([0-9() -]{8,20})",
+      "emailPattern": "([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,})",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato"
+      ],
+      "phonePattern": "Telefone:?\\s*([0-9() -]{8,20})",
+      "whatsappPattern": "whatsapp|wa\\.me"
+    },
+    "updatedAt": "2026-09-04T12:30:00.000Z"
+  },
+  {
+    "id": "abase",
+    "developer": "Abase Sistemas e Soluções LTDA",
+    "cms": "Abase Sistemas",
+    "description": "No desenvolvedor Abase, a Mesa Diretora (/site/mesa-diretora/componentes ou /site/mesa-diretora) exibe os Componentes com o texto 'PRESIDENTE', foto e logo abaixo o nome do presidente. Extraído o nome do presidente, o robô navega ao menu Vereadores (/site/vereadores), localiza o presidente na lista e abre a ficha individual para coletar os dados completos.",
+    "sampleChambers": [
+      "BOA VISTA DO BURICÁ - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/site/mesa-diretora/componentes",
+        "/site/mesa-diretora",
+        "/mesa-diretora/componentes",
+        "/mesa-diretora",
+        "/site/vereadores",
+        "/vereadores"
+      ],
+      "menuSelector": "a:contains('Mesa Diretora'), a:contains('Vereadores')",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".componente, .membro, .card, div[class*='componente'], div:has(img)",
+      "roleSelector": ":contains('PRESIDENTE'), .cargo, strong, b, h4, h5",
+      "nameSelector": ".nome, h3, h4, h5, p, span, a",
+      "linkSelector": "a[href*='vereador'], a[href*='membro'], a[href*='detalhe']",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b|PRESIDENTE"
+    },
+    "profileExtraction": {
+      "urlPattern": "/site/vereador",
+      "nomeCompletoPattern": "Nome(?:\\s+Completo)?:?\\s*([^<\\n\\r]+)",
+      "nomePoliticoPattern": "Nome\\s+Pol[íi]tico:?\\s*([^<\\n\\r]+)",
+      "partidoPattern": "Partido:?\\s*([A-Z0-9]{2,10})",
+      "celularPattern": "(?:Celular|WhatsApp|Telefone):?\\s*([0-9() -]{8,20})",
+      "telefonePattern": "(?:Telefone|Fone):?\\s*([0-9() -]{8,20})",
+      "emailPattern": "([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,})",
+      "nascimentoPattern": "Nascimento:?\\s*([^<\\n\\r]+)",
+      "estadoCivilPattern": "Estado\\s+Civil:?\\s*([^<\\n\\r]+)",
+      "biografiaPattern": "Biografia",
+      "mandatoPattern": "Mandato|Legislatura",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/site/fale-conosco",
+        "/site/contato",
+        "/contato"
+      ],
+      "phonePattern": "(?:Telefone|Fone):?\\s*([0-9() -]{8,20})",
+      "whatsappPattern": "whatsapp|wa\\.me"
+    },
+    "updatedAt": "2026-09-05T12:00:00.000Z"
+  },
+  {
+    "id": "atelie_influence",
+    "developer": "Atelie influence",
+    "cms": "Atelie influence",
+    "description": "No Atelie influence / Influence Agência Digital, a Mesa Diretora fica na rota /mesa. Cada membro possui um card (.card-vereador) com foto, nome (h3) e cargo (.cargo-vereador). O card possui link para a página individual do vereador (/vereadores/ID), onde constam Partido, Nascimento, Escolaridade e Contatos.",
+    "sampleChambers": [
+      "https://ametistadosul.rs.leg.br/mesa",
+      "AMETISTA DO SUL - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/mesa",
+        "/mesa-diretora",
+        "/vereadores",
+        "/site/mesa"
+      ],
+      "menuSelector": "a[href*='/mesa'], a:contains('Mesa Diretora')",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card-vereador, a:has(.card-vereador), a[href*='/vereadores/'], .col-md-3:has(.card-vereador), .card, .membro",
+      "roleSelector": ".cargo-vereador, .cargo-vereador p, .cargo",
+      "nameSelector": ".vereadores-dados h3, h3, .nome",
+      "linkSelector": "a, [href]",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "/vereadores/",
+      "nomeCompletoPattern": "(?:Nome:?\\s*<\\/span>|Nome:)\\s*([^<\\n\\r]+)",
+      "nomePoliticoPattern": "(?:Nome Político:?\\s*<\\/span>|Nome Político:)\\s*([^<\\n\\r]+)",
+      "partidoPattern": "(?:Partido:?\\s*<\\/span>|Partido:)\\s*([^<\\n\\r]+)",
+      "celularPattern": "(?:Celular|WhatsApp):?\\s*([0-9() -]{8,20})",
+      "telefonePattern": "(?:Telefone|Fone):?\\s*([0-9() -]{8,20})",
+      "emailPattern": "([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,})",
+      "nascimentoPattern": "(?:Nascimento:?\\s*<\\/span>|Nascimento:)\\s*([0-9]{2}\\/[0-9]{2}\\/[0-9]{4})",
+      "estadoCivilPattern": "Estado Civil:?\\s*([^<\\n]+)",
+      "biografiaPattern": "",
+      "mandatoPattern": "",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ],
+      "phonePattern": "(?:Telefone|Fone):?\\s*([0-9() -]{8,20})",
+      "ouvidoriaPattern": "Ouvidoria:?\\s*([0-9() -]{8,20})",
+      "whatsappPattern": "whatsapp|wa\\.me|api\\.whatsapp"
+    },
+    "updatedAt": "2026-09-06T20:16:45.917Z"
+  },
+  {
+    "id": "l9web",
+    "developer": "l9web",
+    "cms": "L9web",
+    "description": "Regras de navegação e extração de presidente para l9web.",
+    "sampleChambers": [],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "webde",
+    "developer": "webde",
+    "cms": "Webde",
+    "description": "Regras de navegação e extração de presidente para webde.",
+    "sampleChambers": [
+      "BOA VISTA DO SUL - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "visao_camaras",
+    "developer": "Visão Câmaras",
+    "cms": "Visão Câmaras",
+    "description": "Regras de navegação e extração de presidente para Visão Câmaras.",
+    "sampleChambers": [
+      "CÂMARA TESTE"
+    ],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "insaite_digital",
+    "developer": "Insaite Digital",
+    "cms": "Insaite Digital",
+    "description": "Regras de navegação e extração de presidente para Insaite Digital.",
+    "sampleChambers": [
+      "BARÃO DE COTEGIPE - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "betha",
+    "developer": "Betha Sistemas",
+    "cms": "Betha Fly",
+    "description": "Regras de navegação e extração de presidente para Betha Sistemas (Câmara de Dona Emma, Bom Retiro e portais Betha Fly).",
+    "sampleChambers": [
+      "https://www.camarabomretiro.sc.gov.br/mesa-diretora/",
+      "https://www.camaradonaemma.sc.gov.br/mesa-diretora.html",
+      "https://www.camaradonaemma.sc.gov.br",
+      "Diversas Câmaras SC/RS"
+    ],
+    "ignoreChamberPhoneForPresident": true,
+    "alternativeForms": [
+      {
+        "id": "betha_bom_retiro",
+        "name": "Forma 1: Linha de Tabela com Link no Nome (ex: Bom Retiro)",
+        "description": "Lista/Tabela de vereadores onde o nome do parlamentar é o link para o perfil. Celular identificado na biografia com ícone 📱.",
+        "clickTarget": "name_link",
+        "containerType": "table",
+        "mesaRoutes": [
+          "/mesa-diretora/",
+          "/mesa-diretora",
+          "/mesa-diretora.html"
+        ],
+        "mesaItemSelector": "tr, .item, .row, .membro, .card, .team-member",
+        "mesaRoleSelector": "td:nth-child(4), .cargo, td:last-child, p.cargo",
+        "mesaNameSelector": "td:nth-child(2) a, a.nome, h4 a, .nome a, a",
+        "mesaLinkSelector": "td a, a.nome, a[href*='vereador'], a",
+        "mesaPresidentPattern": "^presidente\\b",
+        "extractFromBio": true,
+        "ignoreChamberPhoneForPresident": true
+      },
+      {
+        "id": "betha_dona_emma",
+        "name": "Forma 2: Cards com Link na Foto (ex: Dona Emma)",
+        "description": "Cards com foto do vereador onde o link do perfil está no contêiner da foto (.team-thumb a:has(img)).",
+        "clickTarget": "photo",
+        "containerType": "cards",
+        "mesaRoutes": [
+          "/mesa-diretora.html",
+          "/mesa-diretora",
+          "/mesa"
+        ],
+        "mesaItemSelector": ".item, .col-md-3, .col-md-4, .card, .membro, tr, .vereador, .team-member",
+        "mesaRoleSelector": ".cargo, td:first-child, .funcao, p, small, span",
+        "mesaNameSelector": "h3, h4, h5, .nome, strong, b, a",
+        "mesaLinkSelector": "a:has(img), a:has(picture), img, a.foto, a[href*='vereador'], a",
+        "mesaPresidentPattern": "^presidente\\b",
+        "extractFromBio": true,
+        "ignoreChamberPhoneForPresident": true
+      },
+      {
+        "id": "betha_card_direto",
+        "name": "Forma 3: Dados Diretos no Card da Mesa (sem abrir perfil)",
+        "description": "Para portais onde os dados do presidente já estão exibidos no próprio card da Mesa Diretora.",
+        "clickTarget": "card_direct",
+        "cardHasDirectContacts": true,
+        "ignoreChamberPhoneForPresident": true
+      }
+    ],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora/",
+        "/mesa-diretora.html",
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "a[href*='mesa-diretora']",
+      "containerType": "table"
+    },
+    "mesaDiretora": {
+      "itemSelector": "tr, .item, .col-md-3, .col-md-4, .card, .membro, .vereador, .team-member",
+      "roleSelector": "td:nth-child(4), .cargo, td:first-child, .funcao, p, small, span",
+      "nameSelector": "td:nth-child(2) a, a.nome, h3, h4, h5, .nome, strong, b, a",
+      "linkSelector": "td a, a.nome, a:has(img), a:has(picture), img, a.foto, a[href*='vereador'], a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "/vereadores",
+      "nomeCompletoPattern": "Nome Completo:?(?:<[^>]+>)*\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:?(?:<[^>]+>)*\\s*([^<\\n]+)",
+      "partidoPattern": "(?:Partido|Sigla):?(?:<[^>]+>)*\\s*([A-Za-z0-9À-ú\\s\\/-]{2,30})",
+      "celularPattern": "(?:Celular|WhatsApp|Whats):?(?:<[^>]+>)*\\s*([0-9() -]{8,20})",
+      "telefonePattern": "(?:Telefones?|Fone):?(?:<[^>]+>)*\\s*([0-9() -]{8,20})",
+      "emailPattern": "E-mail:?(?:<[^>]+>)*\\s*([^<\\n]+)",
+      "nascimentoPattern": "(?:Data de Nascimento|Nascimento):?(?:<[^>]+>)*\\s*([0-9\\/.-]{8,12})",
+      "estadoCivilPattern": "Estado Civil:?(?:<[^>]+>)*\\s*([^<\\n]+)",
+      "biografiaPattern": "",
+      "mandatoPattern": "(?:Mandato|Legislatura):?(?:<[^>]+>)*\\s*([0-9\\/ -a-zA-Z]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ],
+      "phonePattern": "(?:Telefones?|Fone):?\\s*([0-9() -]{8,20})",
+      "ouvidoriaPattern": "",
+      "whatsappPattern": "whatsapp|wa\\.me"
+    },
+    "updatedAt": "2026-09-10T12:55:00.000Z"
+  },
+  {
+    "id": "dbseller",
+    "developer": "DBSeller",
+    "cms": "e-Cidade Legislativo",
+    "description": "Regras de navegação e extração de presidente para DBSeller.",
+    "sampleChambers": [
+      "Diversas Câmaras RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "govbr",
+    "developer": "GovBR / Governança Brasil",
+    "cms": "GovBR Portal",
+    "description": "Regras de navegação e extração de presidente para GovBR / Governança Brasil.",
+    "sampleChambers": [
+      "Diversas Câmaras RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "dueto",
+    "developer": "Dueto Tecnologia",
+    "cms": "Dueto Web",
+    "description": "Regras de navegação e extração de presidente para Dueto Tecnologia.",
+    "sampleChambers": [
+      "Diversas Câmaras RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "innovareweb",
+    "developer": "InnovareWeb",
+    "cms": "InnovareWeb",
+    "description": "Regras de navegação e extração de presidente para InnovareWeb.",
+    "sampleChambers": [
+      "ALPESTRE - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "_addesign",
+    "developer": "#adDesign",
+    "cms": "#adDesign",
+    "description": "Regras de navegação e extração de presidente para #adDesign.",
+    "sampleChambers": [
+      "ALMIRANTE TAMANDARÉ DO SUL - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "slah_informatica",
+    "developer": "Slah Informática",
+    "cms": "Slah Informática",
+    "description": "Regras de navegação e extração de presidente para Slah Informática.",
+    "sampleChambers": [
+      "ANDRÉ DA ROCHA - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "citta___inteligencia_em_gestao",
+    "developer": "Città - Inteligência em Gestão Pública",
+    "cms": "CittaTec",
+    "description": "Regras de navegação e extração de presidente para Città - Inteligência em Gestão Pública.",
+    "sampleChambers": [
+      "BARRA DO RIBEIRO - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "king_page",
+    "developer": "King Page",
+    "cms": "King Page",
+    "description": "Regras de navegação e extração de presidente para King Page.",
+    "sampleChambers": [
+      "BOZANO - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "cmpa",
+    "developer": "CMPA",
+    "cms": "CMPA",
+    "description": "Regras de navegação e extração de presidente para CMPA.",
+    "sampleChambers": [
+      "BRAGA - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "delta_ti",
+    "developer": "Delta TI",
+    "cms": "Delta Legislativo",
+    "description": "Regras de navegação e extração de presidente para Delta TI.",
+    "sampleChambers": [],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "ipm_sistemas",
+    "developer": "IPM Sistemas",
+    "cms": "Atende.Net",
+    "description": "Regras de navegação e extração de presidente para IPM Sistemas.",
+    "sampleChambers": [],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "sonner_sistemas",
+    "developer": "Sonner Sistemas",
+    "cms": "Sonner Portal",
+    "description": "Regras de navegação e extração de presidente para Sonner Sistemas.",
+    "sampleChambers": [],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "thema_informatica",
+    "developer": "Thema Informática",
+    "cms": "Thema Portal",
+    "description": "Regras de navegação e extração de presidente para Thema Informática.",
+    "sampleChambers": [],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "plenaria_sistemas",
+    "developer": "Plenária Sistemas",
+    "cms": "Plenária Sistemas",
+    "description": "Regras de navegação e extração de presidente para Plenária Sistemas.",
+    "sampleChambers": [],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "siganet",
+    "developer": "Siganet",
+    "cms": "Siganet",
+    "description": "Regras de navegação e extração de presidente para Siganet.",
+    "sampleChambers": [],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    }
+  },
+  {
+    "id": "bigdream_",
+    "developer": "BigDream.",
+    "cms": "BigDream.",
+    "description": "Regras de navegação e extração de presidente para BigDream..",
+    "sampleChambers": [],
+    "navigation": {
+      "routes": [],
+      "menuSelector": "",
+      "containerType": "direct_page"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": " - Presidente da Câmara"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "nascimentoPattern": "Data de Nascimento:\\s*([^<\\n]+)",
+      "estadoCivilPattern": "Estado Civil:\\s*([^<\\n]+)",
+      "biografiaPattern": "",
+      "mandatoPattern": "",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ],
+      "phonePattern": "",
+      "ouvidoriaPattern": "",
+      "whatsappPattern": ""
+    },
+    "updatedAt": "2026-09-06T22:35:42.843Z"
+  },
+  {
+    "id": "copyright",
+    "developer": "Copyright",
+    "cms": "Copyright",
+    "description": "Regras de navegação e extração de presidente para Copyright.",
+    "sampleChambers": [],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "nascimentoPattern": "Data de Nascimento:\\s*([^<\\n]+)",
+      "estadoCivilPattern": "Estado Civil:\\s*([^<\\n]+)",
+      "biografiaPattern": "",
+      "mandatoPattern": "",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    },
+    "updatedAt": "2026-09-06T22:22:41.597Z"
+  },
+  {
+    "id": "bigdream",
+    "developer": "BigDream",
+    "cms": "BigDream / WordPress",
+    "description": "Em portais da BigDream (WordPress/Elementor), a Mesa Diretora é exibida na própria página inicial em blocos Elementor (.elementor-heading-title ou .elementor-icon-list-item). Os nomes podem vir antes ou depois do prefixo Presidente (ex: 'Danielli Marcansoni - Presidente da Câmara' em Harmonia ou 'Presidente: Jairo Henrique Kunzler' em Tupandi).",
+    "sampleChambers": [
+      "HARMONIA - RS",
+      "TUPANDI - RS"
+    ],
+    "navigation": {
+      "routes": [
+        "/"
+      ],
+      "menuSelector": "",
+      "containerType": "direct_page"
+    },
+    "mesaDiretora": {
+      "itemSelector": "h2.elementor-heading-title, .elementor-icon-list-item, .elementor-icon-list-text, p, li",
+      "roleSelector": "",
+      "nameSelector": "",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "",
+      "nomePoliticoPattern": "",
+      "partidoPattern": "",
+      "celularPattern": "",
+      "telefonePattern": "",
+      "emailPattern": "",
+      "nascimentoPattern": "",
+      "estadoCivilPattern": "",
+      "biografiaPattern": "",
+      "mandatoPattern": "",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    },
+    "updatedAt": "2026-09-06T22:45:00.000Z"
+  },
+  {
+    "id": "portal_da_transparencia",
+    "developer": "Portal da Transparência",
+    "cms": "Portal da Transparência",
+    "description": "Regras de navegação e extração de Mesa Diretora e Presidente para portais Portal da Transparência.",
+    "sampleChambers": [
+      "https://www.bomretiro.sc.leg.br",
+      "http://www.camaraaratiba.com.br/",
+      "https://camarachapada.rs.gov.br"
+    ],
+    "navigation": {
+      "routes": [
+        "/pt-br/mesa-diretora",
+        "/mesa-diretora",
+        "/mesa",
+        "/presidente",
+        "/pt-br/vereadores",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador, .item, .elementor-widget-wrap, .col-md-3, .col-md-4",
+      "roleSelector": "small, .cargo, td:first-child, .funcao, strong, h3, h4, p",
+      "nameSelector": "a.stretched-link, .nome, h3, h4, h6, a, strong, b",
+      "linkSelector": ".nome a, h3 a, h4 a, a.nome, a.stretched-link",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "(?:Partido|Vereadores):?\\s*([A-Za-z0-9À-ú\\s\\/-]{2,30})",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "(?:Telefones?|Fone):?\\s*([0-9() -]{8,20})",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "nascimentoPattern": "Data de Nascimento:\\s*([^<\\n]+)",
+      "estadoCivilPattern": "Estado Civil:\\s*([^<\\n]+)",
+      "biografiaPattern": "",
+      "mandatoPattern": "",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ],
+      "phonePattern": "",
+      "ouvidoriaPattern": "",
+      "whatsappPattern": ""
+    },
+    "updatedAt": "2026-09-16T14:37:58.126Z"
+  },
+  {
+    "id": "legisoft",
+    "developer": "Legisoft",
+    "cms": "Legisoft",
+    "description": "Regras de navegação e extração de presidente para Legisoft.",
+    "sampleChambers": [
+      "https://www.camaradonaemma.sc.gov.br/perguntas-frequentes"
+    ],
+    "navigation": {
+      "routes": [
+        "/perguntas-frequenteshttps://www.camaradonaemma.sc.gov.br/mesa-diretora.html",
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a:has(img), a:has(picture), img, a.foto",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "nascimentoPattern": "Data de Nascimento:\\s*([^<\\n]+)",
+      "estadoCivilPattern": "Estado Civil:\\s*([^<\\n]+)",
+      "biografiaPattern": "",
+      "mandatoPattern": "",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ],
+      "phonePattern": "",
+      "ouvidoriaPattern": "",
+      "whatsappPattern": ""
+    },
+    "updatedAt": "2026-09-10T12:44:25.257Z"
+  },
+  {
+    "id": "portaltriclientes",
+    "developer": "portaltriclientes",
+    "cms": "portaltriclientes",
+    "description": "Regras de navegação e extração de presidente para portaltriclientes.",
+    "sampleChambers": [],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "nascimentoPattern": "Data de Nascimento:\\s*([^<\\n]+)",
+      "estadoCivilPattern": "Estado Civil:\\s*([^<\\n]+)",
+      "biografiaPattern": "",
+      "mandatoPattern": "",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    },
+    "updatedAt": "2026-09-10T11:35:42.735Z"
+  },
+  {
+    "id": "perspectivadigital",
+    "developer": "Perspectivadigital",
+    "cms": "Perspectivadigital",
+    "description": "Regras de navegação e extração de presidente para Perspectivadigital.",
+    "sampleChambers": [],
+    "navigation": {
+      "routes": [
+        "/mesa-diretora",
+        "/mesa",
+        "/vereadores",
+        "/legislativo"
+      ],
+      "menuSelector": "",
+      "containerType": "cards"
+    },
+    "mesaDiretora": {
+      "itemSelector": ".card, .membro, tr, .vereador",
+      "roleSelector": ".cargo, td:first-child, .funcao",
+      "nameSelector": ".nome, h3, h4, a",
+      "linkSelector": "a",
+      "avatarSelector": "img",
+      "presidentRolePattern": "^presidente\\b"
+    },
+    "profileExtraction": {
+      "urlPattern": "",
+      "nomeCompletoPattern": "Nome Completo:\\s*([^<\\n]+)",
+      "nomePoliticoPattern": "Nome Político:\\s*([^<\\n]+)",
+      "partidoPattern": "Partido:\\s*([^<\\n]+)",
+      "celularPattern": "Celular:\\s*([^<\\n]+)",
+      "telefonePattern": "Telefone:\\s*([^<\\n]+)",
+      "emailPattern": "E-mail:\\s*([^<\\n]+)",
+      "nascimentoPattern": "Data de Nascimento:\\s*([^<\\n]+)",
+      "estadoCivilPattern": "Estado Civil:\\s*([^<\\n]+)",
+      "biografiaPattern": "",
+      "mandatoPattern": "",
+      "useCelularAsWhatsapp": true
+    },
+    "chamberContacts": {
+      "routes": [
+        "/",
+        "/contato",
+        "/fale-conosco"
+      ]
+    },
+    "updatedAt": "2026-09-10T11:35:42.735Z"
+  }
+]

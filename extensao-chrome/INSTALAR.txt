@@ -1,0 +1,20 @@
+JP MINATO — CONTATOS E WHATSAPP · 1.17.0
+
+Atualização da extensão:
+1. Atualize os arquivos completos do MVP, preservando dados.
+2. Abra chrome://extensions no Chrome do escritório.
+3. No cartão JP Minato, clique Recarregar e confira versão 1.17.0.
+4. Se necessário: Modo do desenvolvedor → Carregar sem compactação → selecione extensao-chrome da instalação atual.
+5. Reabra o MVP e pressione Ctrl+F5.
+
+Saudações pelo escritório:
+MVP em http://127.0.0.1:8765 → WhatsApp do escritório → informe seu número Business com DDD → ative → Salvar configuração → Conectar no escritório.
+Conecte o WhatsApp Web por QR, se solicitado, usando o número cadastrado. A aba existente será reutilizada. Mantenha a aba WhatsApp Web e o painel da estação abertos. Não há senha de WhatsApp no MVP.
+
+Em Enviar PDF, os botões de WhatsApp passam a Enviar saudação quando o modo do escritório está ativo. Um clique envia um contato, somente texto; nesta versão o PDF não é anexado automaticamente pelo WhatsApp. O e-mail mantém envio direto com PDF. A saudação funciona mesmo sem PDF pronto.
+
+De casa, acesse o MVP pela VPN: os comandos vão para a estação no escritório. Não é necessário instalar esta extensão em casa para comandar saudações; a captura de contatos em sites nessa máquina continua exigindo a extensão.
+
+Mantenha a captura de contatos/brasões como antes: inicie pelo município no MVP, navegue pelo percurso autorizado e use botão direito → JP Minato — Salvar como. Novas capturas devem ser iniciadas após recarregar a extensão.
+
+Integração não oficial; validar compatibilidade com o WhatsApp Web real antes de usar comercialmente. Nenhuma faixa de volume garante ausência de restrições.

@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "JP Minato — Contatos e WhatsApp",
+  "version": "1.18.0",
+  "description": "Marca fotos e links de galerias, captura contatos vinculados ao município e envia saudações pela estação WhatsApp do escritório.",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab",
+    "notifications",
+    "scripting",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "http://localhost/*",
+    "https://web.whatsapp.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "JP Minato — Capturar contatos",
+    "default_popup": "instructions.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://127.0.0.1/*",
+        "http://localhost/*"
+      ],
+      "js": [
+        "connect.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "optional_host_permissions": [
+    "http://*/*"
+  ]
+}

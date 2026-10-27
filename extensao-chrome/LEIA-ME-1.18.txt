@@ -1,0 +1,7 @@
+JP MINATO — EXTENSÃO 1.18.0
+
+Substitua os arquivos da pasta instalada e recarregue em chrome://extensions.
+Novos menus: Galeria atual — marcar esta foto e guardar este link/página.
+Abra o site pelo mapa ou cadastro do município para criar o vínculo.
+Atualize também o MVP para 1.35.
+A consulta negativa de WhatsApp só é gravada quando explícita; erros continuam pendentes.
